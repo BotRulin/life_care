@@ -1,0 +1,6 @@
+NSCameraUsageDescription = "Allow the camera to be accessed in order to access the application's functionalities.";
+PermissionGroupNotification = "Allow notifications to be accessed in order to access the app's functionalities.";
+NSPhotoLibraryUsageDescription = "Allow the gallery to be accessed to access the application's functionalities.";
+NSMicrophoneUsageDescription = "Allow the microphone to be accessed in order to access the application's functionalities.";
+NSLocationWhenInUseUsageDescription = "Allow location access to access the app's features.";
+NSCalendarsUsageDescription = "Allow the calendar to be accessed in order to access the application's functionalities.";

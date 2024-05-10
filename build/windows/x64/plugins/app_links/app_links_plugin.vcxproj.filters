@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin_c_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="V:\M08-Flutter\life_care\life_care\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\include\app_links\app_links_plugin_c_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V:\M08-Flutter\life_care\life_care\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="V:\M08-Flutter\life_care\life_care\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{F3B71CA6-5B64-3FE2-862D-D099C4AC27F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5EA8F8B1-5D5F-3ED4-8A6E-88DD5F2A05F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

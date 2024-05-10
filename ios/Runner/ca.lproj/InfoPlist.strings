@@ -1,0 +1,6 @@
+NSCameraUsageDescription = "Permeteu que s'accedeixi a la càmera per poder accedir a les funcionalitats de l'aplicació.";
+PermissionGroupNotification = "Permeteu que s'accedeixi a les notificacions per poder accedir a les funcionalitats de l'aplicació.";
+NSPhotoLibraryUsageDescription = "Permeteu que s'accedeixi a la galeria per poder accedir a les funcionalitats de l'aplicació.";
+NSMicrophoneUsageDescription = "Permeteu que s'accedeixi al micròfon per poder accedir a les funcionalitats de l'aplicació.";
+NSLocationWhenInUseUsageDescription = "Permeteu que s'accedeixi a la localització per poder accedir a les funcionalitats de l'aplicació.";
+NSCalendarsUsageDescription = "Permeteu que s'accedeixi al calendari per poder accedir a les funcionalitats de l'aplicació.";

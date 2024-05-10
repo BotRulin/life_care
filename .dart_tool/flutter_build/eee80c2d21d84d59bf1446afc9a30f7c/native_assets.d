@@ -1,0 +1,1 @@
+ V:\\M08-Flutter\\life_care\\life_care\\.dart_tool\\flutter_build\\eee80c2d21d84d59bf1446afc9a30f7c\\native_assets.yaml: 

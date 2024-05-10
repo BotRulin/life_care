@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\runner\flutter_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\runner\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\runner\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\runner\win32_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V:\M08-Flutter\life_care\life_care\windows\flutter\generated_plugin_registrant.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="V:\M08-Flutter\life_care\life_care\windows\runner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="V:\M08-Flutter\life_care\life_care\windows\runner\Runner.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5EA8F8B1-5D5F-3ED4-8A6E-88DD5F2A05F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

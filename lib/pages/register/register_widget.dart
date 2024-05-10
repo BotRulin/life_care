@@ -1,0 +1,388 @@
+import '/auth/supabase_auth/auth_util.dart';
+import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/material.dart';
+import 'register_model.dart';
+export 'register_model.dart';
+
+class RegisterWidget extends StatefulWidget {
+  const RegisterWidget({super.key});
+
+  @override
+  State<RegisterWidget> createState() => _RegisterWidgetState();
+}
+
+class _RegisterWidgetState extends State<RegisterWidget> {
+  late RegisterModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => RegisterModel());
+
+    _model.txbCorreoController ??= TextEditingController();
+    _model.txbCorreoFocusNode ??= FocusNode();
+
+    _model.txbContrasenaController ??= TextEditingController();
+    _model.txbContrasenaFocusNode ??= FocusNode();
+
+    _model.txbRepetircontrasenaController ??= TextEditingController();
+    _model.txbRepetircontrasenaFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: Colors.white,
+        body: Align(
+          alignment: const AlignmentDirectional(0.0, 0.0),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      'assets/images/image(2).png',
+                      width: 300.0,
+                      height: 321.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'ezw1cf31' /* Correo */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Ubuntu',
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: TextFormField(
+                    controller: _model.txbCorreoController,
+                    focusNode: _model.txbCorreoFocusNode,
+                    autofocus: true,
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                      hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF7165),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    validator: _model.txbCorreoControllerValidator
+                        .asValidator(context),
+                  ),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '42k3zf8p' /* Contraseña */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Ubuntu',
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: TextFormField(
+                    controller: _model.txbContrasenaController,
+                    focusNode: _model.txbContrasenaFocusNode,
+                    autofocus: true,
+                    obscureText: !_model.txbContrasenaVisibility,
+                    decoration: InputDecoration(
+                      labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                      hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF7165),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                      suffixIcon: InkWell(
+                        onTap: () => setState(
+                          () => _model.txbContrasenaVisibility =
+                              !_model.txbContrasenaVisibility,
+                        ),
+                        focusNode: FocusNode(skipTraversal: true),
+                        child: Icon(
+                          _model.txbContrasenaVisibility
+                              ? Icons.visibility_outlined
+                              : Icons.visibility_off_outlined,
+                          color: const Color(0xB3000000),
+                          size: 20.0,
+                        ),
+                      ),
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    validator: _model.txbContrasenaControllerValidator
+                        .asValidator(context),
+                  ),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'gt1o71v6' /* Repetir contraseña */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Ubuntu',
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: TextFormField(
+                    controller: _model.txbRepetircontrasenaController,
+                    focusNode: _model.txbRepetircontrasenaFocusNode,
+                    autofocus: true,
+                    obscureText: !_model.txbRepetircontrasenaVisibility,
+                    decoration: InputDecoration(
+                      labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                      hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF7165),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).error,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                      suffixIcon: InkWell(
+                        onTap: () => setState(
+                          () => _model.txbRepetircontrasenaVisibility =
+                              !_model.txbRepetircontrasenaVisibility,
+                        ),
+                        focusNode: FocusNode(skipTraversal: true),
+                        child: Icon(
+                          _model.txbRepetircontrasenaVisibility
+                              ? Icons.visibility_outlined
+                              : Icons.visibility_off_outlined,
+                          color: const Color(0xB3000000),
+                          size: 20.0,
+                        ),
+                      ),
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    validator: _model.txbRepetircontrasenaControllerValidator
+                        .asValidator(context),
+                  ),
+                ),
+                InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed(
+                      'Login',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: const TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.leftToRight,
+                        ),
+                      },
+                    );
+                  },
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'ym1o2383' /* Ya tengo una cuenta */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Ubuntu',
+                          color: const Color(0xFFFF7165),
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 50.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
+                            if (_model.txbContrasenaController.text !=
+                                _model.txbRepetircontrasenaController.text) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text(
+                                    'Passwords don\'t match!',
+                                  ),
+                                ),
+                              );
+                              return;
+                            }
+
+                            final user =
+                                await authManager.createAccountWithEmail(
+                              context,
+                              _model.txbCorreoController.text,
+                              _model.txbContrasenaController.text,
+                            );
+                            if (user == null) {
+                              return;
+                            }
+
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  title: const Text('Registro Completado'),
+                                  content: const Text(
+                                      'Si ha introducido correctamente el correo electrónico, se le mandará un enlace de verificación con el cual verificara su cuenta, y podrá acceder a la aplicación la siguiente vez.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: const Text('Listo'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                            await UsuarioTable().insert({
+                              'correo': _model.txbCorreoController.text,
+                            });
+
+                            context.pushNamedAuth('Login', context.mounted);
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            '351jqsgb' /* Registrarse */,
+                          ),
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: const Color(0xFFFF7165),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Ubuntu',
+                                  color: Colors.white,
+                                ),
+                            elevation: 3.0,
+                            borderSide: const BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ].divide(const SizedBox(height: 10.0)),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

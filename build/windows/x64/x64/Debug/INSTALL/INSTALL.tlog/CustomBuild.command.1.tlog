@@ -1,0 +1,10 @@
+^V:\M08-FLUTTER\LIFE_CARE\LIFE_CARE\BUILD\WINDOWS\X64\CMAKEFILES\D962F4EE470DF42A16C5580E9B57B569\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
